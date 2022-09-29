@@ -20,11 +20,11 @@ model schedule {
 
 model users {
   user_id    Int          @id(map: "users_pk") @default(autoincrement())
-  type       Int
-  name       String
-  e_mail     String       @unique @map("e-mail")
+  type       String       @db.VarChar(255)
+  name       String       @db.VarChar(255)
+  e_mail     String       @unique @map("e-mail") @db.VarChar(255)
   phone      Int          @unique
-  password   String
+  password   String       @db.VarChar(255)
   schedule   schedule[]
   volunterrs volunterrs[]
   work_front work_front[]
