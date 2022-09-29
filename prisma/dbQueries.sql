@@ -1,10 +1,10 @@
 CREATE TABLE "users" (
 	"user_id" serial NOT NULL UNIQUE,
-	"type" integer NOT NULL,
-	"name" TEXT NOT NULL,
-	"e-mail" TEXT NOT NULL UNIQUE,
+	"type" VARCHAR(255) NOT NULL,
+	"name" VARCHAR(255) NOT NULL,
+	"e-mail" VARCHAR(255) NOT NULL UNIQUE,
 	"phone" integer NOT NULL UNIQUE,
-	"password" TEXT NOT NULL,
+	"password" VARCHAR(255) NOT NULL,
 	CONSTRAINT "users_pk" PRIMARY KEY ("user_id")
 ) WITH (
   OIDS=FALSE
@@ -56,6 +56,7 @@ ALTER TABLE "volunterrs" ADD CONSTRAINT "volunterrs_fk1" FOREIGN KEY ("work_fron
 
 ALTER TABLE "schedule" ADD CONSTRAINT "schedule_fk0" FOREIGN KEY ("user_volunteer_id") REFERENCES "users"("user_id");
 ALTER TABLE "schedule" ADD CONSTRAINT "schedule_fk1" FOREIGN KEY ("work_front_id") REFERENCES "work_front"("work_front_id");
+
 
 
 
