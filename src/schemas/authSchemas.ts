@@ -1,13 +1,19 @@
-import Joi from 'joi';
+import joi from 'joi';
 
-export const signUpSchema = Joi.object({
-    username: Joi.string().trim().required(),
-    email: Joi.string().email().required(),
-    password: Joi.string().trim().required(),
-    image: Joi.string().uri().required(),
+export const signUpSchema = joi.object({
+    type: joi.string().trim().required(),
+    name: joi.string().trim().required(),
+    e_mail: joi.string().email().required(),
+    phone: joi.string().trim().required(),
+    password: joi.string().trim().min(8).required(),
+    confirmPassword: joi.any().equal(joi.ref('password'))
+        .required()
+        .label('Confirm password')
+        .messages({ 'any.only': '{{#label}} does not match' })
 });
 
-export const signInSchema = Joi.object({
-    email: Joi.string().email().required(),
-    password: Joi.string().trim().required(),
+export const signInSchema = joi.object({
+    email: joi.string().email().required(),
+    password: joi.string().trim().required(),
+
 });
