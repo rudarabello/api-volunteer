@@ -23,7 +23,7 @@ model users {
   type       String       @db.VarChar(255)
   name       String       @db.VarChar(255)
   e_mail     String       @unique @map("e-mail") @db.VarChar(255)
-  phone      Int          @unique
+  phone      String       @unique
   password   String       @db.VarChar(255)
   schedule   schedule[]
   volunterrs volunterrs[]
