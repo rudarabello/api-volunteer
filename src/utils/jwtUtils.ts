@@ -10,7 +10,7 @@ export function encrypt(password: string) {
 
 export async function verifyPassword(password: string, hash: string) {
     const match = await bcrypt.compare(password, hash);
-    return !match;
+    return match;
 }
 
 export const generateUserToken = (userId: number) => {
