@@ -13,14 +13,14 @@ export async function signUp(
     res.status(201).send('User registred sucessfully');
 }
 
-// export async function signIn(
-//     req: Request,
-//     res: Response,
-//     next: NextFunction
-// ) {
-//     const { e_mail, password } = req.body;
+export async function signIn(
+    req: Request,
+    res: Response,
+    next: NextFunction
+) {
+    const { e_mail, password } = req.body;
 
-//     const token = await authService.signIn({ e_mail, password });
+    const token = await authService.loginUser({ e_mail, password });
 
-//     res.status(200).send({ token });
-// }
+    res.status(200).send({ token });
+}
