@@ -13,7 +13,7 @@ export const signUpSchema = joi.object({
 });
 
 export const signInSchema = joi.object({
-    email: joi.string().email().required(),
+    e_mail: joi.string().email().required(),
     password: joi.string().trim().required(),
 
 });
