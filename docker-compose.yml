@@ -1,0 +1,24 @@
+version: "3"
+services:
+  db_postgres_volunteer:
+    image: postgres
+    container_name: db_postgres_volunteer
+    restart: always
+    ports:
+      - 6000:5432
+    env_file:
+      - .env
+    volumes:
+      - pg_volunteer:/var/lib/postgresql/data
+
+  node_app_volunteer:
+    container_name: node_app_volunteer
+    build: .
+    ports:
+      - 5000:5000
+    depends_on:
+      - db_postgres_volunteer
+    env_file:
+      - .env
+volumes:
+  pg_volunteer:

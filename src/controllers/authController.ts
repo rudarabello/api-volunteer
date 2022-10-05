@@ -10,7 +10,7 @@ export async function signUp(
 
     await authService.createUser({ type, name, e_mail, phone, password });
 
-    res.status(201).send('user registred sucessfully');
+    res.status(201).send('User registred sucessfully');
 }
 
 // export async function signIn(
