@@ -16,3 +16,12 @@ export async function verifyPassword(password: string, hash: string) {
 export const generateUserToken = (userId: number) => {
     return jwt.sign({ userId }, String(process.env.JWT_SECRET), { expiresIn: '24h' });
 }
+
+export const decodeToken = (token: string) => {
+    try {
+        const decoded = jwt.verify(token, String(process.env.JWT_SECRET));
+        return decoded;
+    } catch (error) {
+        return error;
+    }
+};
