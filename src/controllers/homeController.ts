@@ -1,0 +1,9 @@
+
+import { Response, Request } from 'express'
+import * as homeService from '../services/homeService'
+
+export const getWorkFrontController = async (req: Request, res: Response) => {
+    const { userId } = res.locals.user_id;
+    const schedule = await homeService.findAllSchedule(userId)
+    res.status(201).send(schedule);
+}
