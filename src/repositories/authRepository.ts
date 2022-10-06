@@ -10,3 +10,7 @@ export async function insertUser(dataUser: CreateUser) {
 export async function findUserByEmail(e_mail: string) {
     return await prisma.users.findUnique({ where: { e_mail } });
 };
+
+export const getUserById = async (user_id: number) => {
+    return await prisma.users.findUnique({ where: { user_id } });
+};
