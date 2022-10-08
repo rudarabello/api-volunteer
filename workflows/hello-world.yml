@@ -1,0 +1,11 @@
+name: Github Action Hello World
+on: [push]
+jobs:
+  Hello-World:
+  runs-on: ubuntu-latest
+  steps:
+    - run: echo "olá tuma 6"
+    - name: Chechout repository code
+      uses: action/checkout@v3
+    - name: Lisr files
+      run: ls ${{github.workspace}}
