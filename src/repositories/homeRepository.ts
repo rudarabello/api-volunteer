@@ -15,3 +15,15 @@ export async function findAllManagers() {
         },
     });
 }
+export async function findAllVolunteers() {
+    return await prisma.users.findMany({
+        where: {
+            type: "volunteer"
+        },
+        select: {
+            name: true,
+            e_mail: true,
+        },
+    });
+}
+

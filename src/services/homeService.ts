@@ -9,3 +9,7 @@ export async function getNameOfManagers() {
     const nameOfManagers = await homeRepository.findAllManagers();
     return nameOfManagers;
 }
+export async function getNameOfVolunteers() {
+    const nameOfVolunteers = await homeRepository.findAllVolunteers();
+    return nameOfVolunteers;
+}
