@@ -5,3 +5,7 @@ export async function findAllSchedule(user_volunteer_id: number): Promise<schedu
     const schedule = await homeRepository.findAllSchedule(user_volunteer_id);
     return schedule;
 }
+export async function getNameOfManagers() {
+    const nameOfManagers = await homeRepository.findAllManagers();
+    return nameOfManagers;
+}

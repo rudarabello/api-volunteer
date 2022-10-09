@@ -7,3 +7,8 @@ export const getWorkFrontController = async (req: Request, res: Response) => {
     const schedule = await homeService.findAllSchedule(userId)
     res.status(201).send(schedule);
 }
+
+export const getNameManagers = async (req: Request, res: Response) => {
+    const nameOfManagers = await homeService.getNameOfManagers()
+    res.status(201).send(nameOfManagers);
+}
