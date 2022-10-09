@@ -10,6 +10,7 @@ export const postWorkFrontCreate = async (req: Request, res: Response) => {
         work_front_name,
         manager_id: userId
     }
+    await workFrontService.verifyTypeUser(userId);
     await workFrontService.createWorkFront(info);
     res.status(201).send('Work front registred sucessfully');
 }
