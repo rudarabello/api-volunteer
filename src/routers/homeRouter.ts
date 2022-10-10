@@ -8,4 +8,4 @@ export const homeRouter = Router();
 
 homeRouter.get('/home', validateToken, homeController.getWorkFrontController);
 homeRouter.get('/home/mangers', validateToken, homeController.getNameManagers);
-homeRouter.get('/home/volunters', validateToken, homeController.getNameVolunteers);
+homeRouter.get('/home/volunteers', validateToken, homeController.getNameVolunteers);
