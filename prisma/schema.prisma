@@ -11,8 +11,8 @@ model schedule {
   schedule_id       Int        @id(map: "schedule_pk") @default(autoincrement())
   user_volunteer_id Int
   work_front_id     Int
-  date_to_work      DateTime   @db.Date
-  time_to_work      DateTime   @db.Time(6)
+  date_to_work      String     @db.VarChar(255)
+  time_to_work      String     @db.VarChar(255)
   invite_accept     Boolean    @default(false)
   users             users      @relation(fields: [user_volunteer_id], references: [user_id], onDelete: NoAction, onUpdate: NoAction, map: "schedule_fk0")
   work_front        work_front @relation(fields: [work_front_id], references: [work_front_id], onDelete: NoAction, onUpdate: NoAction, map: "schedule_fk1")
