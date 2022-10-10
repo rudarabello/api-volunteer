@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "schedule" ALTER COLUMN "date_to_work" SET DATA TYPE VARCHAR(255),
+ALTER COLUMN "time_to_work" SET DATA TYPE VARCHAR(255);
