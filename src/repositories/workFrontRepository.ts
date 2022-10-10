@@ -1,5 +1,5 @@
 import prisma from "../database";
-import { Tworkfront } from '../types/homeTypes';
+import { Tworkfront, TscheduleId } from '../types/homeTypes';
 import { UserId } from '../types/userTypes';
 
 export async function insertWorkFront(info: Tworkfront) {
@@ -13,6 +13,19 @@ export async function findByWorkFrontName(info: Tworkfront) {
         where: { work_front_name }
     })
 }
+export async function getAllWorkFronts(info: UserId) {
+    const { user_id } = info;
+    return await prisma.work_front.findMany({
+        where: {
+            manager_id: user_id
+        },
+        select: {
+            work_front_id: true,
+            work_front_name: true,
+        },
+    });
+}
+
 export async function findbyUserId(info: UserId) {
     const { user_id } = info;
     const type = "admim";
@@ -23,4 +36,8 @@ export async function findbyUserId(info: UserId) {
         }
     });
 };
-
+export async function insertSchedule(info: TscheduleId) {
+    return await prisma.schedule.create({
+        data: info
+    });
+};

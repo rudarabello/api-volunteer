@@ -14,3 +14,22 @@ export const postWorkFrontCreate = async (req: Request, res: Response) => {
     await workFrontService.createWorkFront(info);
     res.status(201).send('Work front registred sucessfully');
 }
+export const getWorkFront = async (req: Request, res: Response) => {
+    const { userId } = res.locals.user_id;
+    const allWorkfronts = await workFrontService.getAllWorkFronts(userId);
+    res.status(201).send(allWorkfronts);
+}
+
+export const postScheduleCreate = async (req: Request, res: Response) => {
+    const { work_front_id, user_id, date_to_work, time_to_work } = req.body;
+    const info: homeTypes.TscheduleId = {
+        user_volunteer_id: user_id,
+        work_front_id: work_front_id,
+        date_to_work: date_to_work,
+        time_to_work: time_to_work,
+        invite_accept: false
+    }
+    await workFrontService.createSchedule(info);
+    res.status(201).send('Schedule registred sucessfully');
+}
+

@@ -10,5 +10,15 @@ workFrontRouter.post('/create-wf',
     validateToken,
     workFrontController.postWorkFrontCreate
 );
+workFrontRouter.get('/get-wf',
+    validateToken,
+    workFrontController.getWorkFront
+);
+
+workFrontRouter.post('/create-sc',
+    validateToken,
+    workFrontController.postScheduleCreate
+);
+
 
 
