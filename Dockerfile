@@ -6,8 +6,11 @@ WORKDIR /usr/src/
 # copia todos os arquivos para o container
 COPY . . 
 
+RUN npm i
+RUN npm run build
+RUN npx prisma generate
+
 EXPOSE 5000
 
-RUN npm i && npm run build && npx prisma generate
 #só executa quando rodarmos a imagem
 CMD ["npm", "start"] 
