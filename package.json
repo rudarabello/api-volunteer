@@ -2,13 +2,16 @@
     "name": "api-volunter",
     "version": "1.0.0",
     "description": "api to volunter project",
-    "main": "",
+    "main": "server.js",
     "engines": {
         "node": "18.x"
     },
     "scripts": {
+        "build": "tsc",
         "dev": "nodemon ./src/server.ts",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "prisma migrate deploy && node dist/server.js"
+
     },
     "keywords": [],
     "author": "",
