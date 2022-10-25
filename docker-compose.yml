@@ -5,7 +5,7 @@ services:
     container_name: db_postgres_volunteer
     restart: always
     ports:
-      - 6000:5432
+      - 2345:5432
     env_file:
       - .env
     volumes:
