@@ -22,7 +22,7 @@ jobs:
           fail_on_empty: true
 
       - name: Build
-        run: docker-compose -f docker-compose.yml build
+        run: docker-compose build
 
       - name: Run
-        run: docker-compose -f docker-compose.yml down && docker-compose -f docker-compose.yml up -d
+        run: docker-compose down && docker-compose up -d
