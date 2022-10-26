@@ -15,7 +15,7 @@ services:
     container_name: node_app_volunteer
     build: .
     ports:
-      - 5000:5000
+      - 80:5000
     depends_on:
       - db_postgres_volunteer
     env_file:
