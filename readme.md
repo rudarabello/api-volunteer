@@ -1,4 +1,4 @@
-# Volunteer
+# API - Volunteer
 
 <p align="center">
   <img  src="src/assets/VLogoComplete.png" height="250px"/>
@@ -44,7 +44,7 @@ The main motivation for doing this personal project was to see the need for the 
 
 ## Next Steps 
 
-- [ ] Design System - Tests
+- [ ] Login with Google - Implementation
 - [ ] Integration with sendGrid API - Implementation
 
 
