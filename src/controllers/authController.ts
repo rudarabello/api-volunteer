@@ -6,7 +6,8 @@ export async function signUp(
     req: Request,
     res: Response
 ) {
-    const { type, name, e_mail, phone, password } = req.body;
+    const { type } = res.locals.type;
+    const { name, e_mail, phone, password } = req.body;
 
     await authService.createUser({ type, name, e_mail, phone, password });
 
