@@ -1,7 +1,7 @@
 # Volunteer
 
 <p align="center">
-  <img  src="src/assets/VLogoComplete.png" height="120px"/>
+  <img  src="src/assets/VLogoComplete.png" height="250px"/>
 </p>
 
 ## Description
