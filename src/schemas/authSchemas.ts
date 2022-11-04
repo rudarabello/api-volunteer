@@ -1,11 +1,11 @@
 import joi from 'joi';
 
 export const signUpSchema = joi.object({
-    type: joi.string().trim().required(),
-    name: joi.string().trim().required(),
-    e_mail: joi.string().email().required(),
-    phone: joi.string().trim().required(),
-    password: joi.string().trim().min(8).required(),
+    name: joi.string().trim().required().min(8),
+    e_mail: joi.string().email().required().min(8),
+    phone: joi.string().trim().required().min(11),
+    token: joi.string().trim().required().max(5),
+    password: joi.string().trim().required().min(8),
     confirmPassword: joi.any().equal(joi.ref('password'))
         .required()
         .label('Confirm password')
