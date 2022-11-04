@@ -1,5 +1,9 @@
 # Volunteer
 
+<p align="center">
+  <img  src="src/assets/VLogoComplete.png" height="120px"/>
+</p>
+
 ## Description
 
 API to front-end app that helps you and your team get organized and achieve your goals
@@ -12,11 +16,11 @@ The main motivation for doing this personal project was to see the need for the 
 
 - A volunteer is collaborating in reception and parking on the same day at different times
 
-  * in this case the app can help the volunteer with a reminder
+    * in this case the app can help the volunteer with a reminder
 
 - A volunteer cannot go at the time they had initially made available
 
-* in this case the app provides a tool to notify the leader
+    * in this case the app provides a tool to notify the leader
 
 ## Features
 
@@ -41,7 +45,7 @@ The main motivation for doing this personal project was to see the need for the 
 ## Next Steps 
 
 - [ ] Design System - Tests
-- [ ] Integration with sendGrid API
+- [ ] Integration with sendGrid API - Implementation
 
 
 ## Running the Project
