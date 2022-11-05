@@ -8,6 +8,10 @@
 
 API to front-end app that helps you and your team get organized and achieve your goals
 
+## Status
+
+![status-ongoing](https://img.shields.io/badge/status-ongoing-yellow?style=for-the-badge)
+
 ## Motivation
 
 The main motivation for doing this personal project was to see the need for the team of volunteers that I am part of, with difficulties to organize themselves when we have many people on more than one work front. 
