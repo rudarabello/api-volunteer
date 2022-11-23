@@ -1,10 +1,11 @@
-import prisma from "../database";
+import prisma from '../database';
 
 export async function findAllSchedule(user_volunteer_id: number) {
     return await prisma.schedule.findMany({
         where: {
-            user_volunteer_id
-        }, select: {
+            user_volunteer_id,
+        },
+        select: {
             schedule_id: true,
             date_to_work: true,
             time_to_work: true,
@@ -12,20 +13,20 @@ export async function findAllSchedule(user_volunteer_id: number) {
             work_front: {
                 select: {
                     work_front_name: true,
-                }
+                },
             },
             users: {
                 select: {
                     name: true,
-                }
-            }
-        }
+                },
+            },
+        },
     });
 }
 export async function findAllManagers() {
     return await prisma.users.findMany({
         where: {
-            type: "manager"
+            type: 'manager',
         },
         select: {
             name: true,
@@ -46,10 +47,10 @@ export async function findAllVolunteers() {
 export async function confirmScheduleRepository(schedule_id: any) {
     return await prisma.schedule.update({
         where: {
-            schedule_id
+            schedule_id,
         },
         data: {
-            invite_accept: true
-        }
-    })
+            invite_accept: true,
+        },
+    });
 }
