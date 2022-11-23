@@ -29,14 +29,3 @@ export async function loginUser(LoginUser: userTypes.LoginUser) {
     return token;
 }
 
-// export async function findUserByEmail(e_mail: string) {
-//     const user = await authRepository.findUserByEmail(e_mail);
-
-//     return user
-// }
-
-// export async function getUsers() {
-//     const users = await authRepository.getUsers();
-
-//     return users
-// }
