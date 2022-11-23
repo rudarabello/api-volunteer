@@ -1,5 +1,5 @@
-import bcrypt from "bcrypt";
-import jwt from "jsonwebtoken";
+import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';
 dotenv.config();
 
@@ -15,7 +15,7 @@ export async function verifyPassword(password: string, hash: string) {
 
 export const generateUserToken = (userId: number) => {
     return jwt.sign({ userId }, String(process.env.JWT_SECRET), { expiresIn: '24h' });
-}
+};
 
 export const decodeToken = (token: string) => {
     try {

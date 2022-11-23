@@ -17,4 +17,3 @@ export async function confirmSchedule(schedule_id: any) {
     const schedule = await homeRepository.confirmScheduleRepository(schedule_id);
     return schedule;
 }
-

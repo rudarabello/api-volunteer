@@ -1,8 +1,6 @@
-import { Router } from "express";
-import * as homeController from "../controllers/homeController";
-import { validateToken } from "../middlewares/validateToken";
-
-
+import { Router } from 'express';
+import * as homeController from '../controllers/homeController';
+import { validateToken } from '../middlewares/validateToken';
 
 export const homeRouter = Router();
 

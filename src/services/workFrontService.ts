@@ -25,4 +25,3 @@ export async function createSchedule(TscheduleId: homeTypes.TscheduleId) {
     const inserted = await workFrontRepository.insertSchedule(TscheduleId);
     if (!inserted) throw errorUtils.conflictError('Conflict on creation of work front');
 }
-
