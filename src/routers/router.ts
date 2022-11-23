@@ -10,5 +10,4 @@ router.use(authRouter);
 router.use(homeRouter);
 router.use(workFrontRouter);
 
-
 export default router;
